@@ -3,13 +3,13 @@ Kernel Netbook compiled for Fedora 28 GNU/Linux optimized for Intel Atom CPU.
 
 ## Files
 
-** RPM FILES: **
+__RPM FILES:__
   1. kernel-4.4.145_rc1_netbook_netbook-1.i386.rpm
   2. kernel-4.4.145_rc1_netbook_netbook-1.src.rpm
   3. kernel-devel-4.4.145_rc1_netbook_netbook-1.i386.rpm
   4. kernel-headers-4.4.145_rc1_netbook_netbook-1.i386.rpm
 
-** CONFIG FILE: **
+__CONFIG FILE:__
   1. config (optimized config for Intel Atom CPU)
 
 
