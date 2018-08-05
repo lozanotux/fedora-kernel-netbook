@@ -1,0 +1,28 @@
+Compile your own customized Fedora Kernel:
+==========================================
+
+1)_ Install dependencies
+    $  sudo dnf install fedpkg fedora-packager rpmdevtools ncurses-devel pesign xz-devel
+    $  sudo dnf install qt3-devel libXi-devel gcc-c++
+    $  sudo dnf builddep kernel
+
+2)_ Get copy of Linux Kernel and Unzip it
+    $  su -
+    #  cd /usr/src
+    #  wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.145.tar.xz
+    #  tar -xvf /var/tmp/linux-4.4.145.tar.xz
+
+3)_ Clean, Config & Patch
+    #  cd linux-4.4.145/
+    #  vi Makefile 
+       (Edit property -> EXTRAVERSION = -rc1-netbook)
+    #  make mrproper
+    #  make menuconfig 
+       (Select Save -> Yes -> Exit -> Exit)
+       (Replace the .config file)
+    #  echo "" > .config
+    #  vi .config
+       (Copy and paste the Fedora Kernel Netbook config file content and save the changes)
+
+4)_ Compile the Kernel into RPM files
+    #  make rpm
